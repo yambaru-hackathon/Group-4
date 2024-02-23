@@ -1,26 +1,29 @@
 "use client";
-import { Box, Button } from '@mui/material';
+import { Box, Button, Divider } from '@mui/material';
 import { atom, useRecoilState } from 'recoil';
+import Styles from "@/styles/styles.module.css";
+import Alerts from "@/app/_alert";
 
-const counter = atom({
-  key: "count",
-  default: 0,
-});
 
 
 export default function Page() {
-  const [count, setCount] = useRecoilState(counter);
 
-  return <Box>
-    <Box>
-      カウンター: {count}
+  return <Box sx={{mx: 3}}>
+    {/* ヘッダー部分 */}
+    <Box sx={{mt: 3}}>
+      <Box className={Styles.toppageHeaderText}>
+        <Box>松田英彦</Box>さん、こんにちは。
+      </Box>
+      <Divider />
     </Box>
+
+    {/* アラート */}
     <Box>
-      <Button variant='contained' onClick={() => {
-        setCount(count + 1);
-      }}>
-        +
-      </Button>
+      <Alerts />
     </Box>
+
+    {/* カード */}
+    <Box></Box>
+
   </Box>
 }
