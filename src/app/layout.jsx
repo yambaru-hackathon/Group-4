@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import {createMuiTheme} from '@material-ui/core/styles';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,3 +22,26 @@ export default function RootLayout({
     </html>
   );
 }
+
+/*テーマを変更するには
+import {MuiThemeProvider} from '@material-ui/core/styles' //追加
+import {theme} from './layout'//追加（相対アドレスは必要に応じて変更）
+//このタグで囲う
+<MuiThemeProvider theme={theme}></MuiThemeProvider>
+*/
+export const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: '#bfe0c0',
+      main: '#B0D9B1',
+      dark: '#7b977b',
+      contrastText: '#000000',
+    },
+    secondary: {
+      light: '#99c9ca',
+      main: '#80BCBD',
+      dark: '#598384',
+      contrastText: '#ffffff',
+    },
+  },
+})
