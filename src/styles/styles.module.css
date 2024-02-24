@@ -6,8 +6,10 @@
 .defaultAppBarContent {
     margin-top: 56px;
     padding: 8px;
+}
 
-    @media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {
+    .defaultAppBarContent {
         margin-top: 64px;
     }
 }
@@ -32,7 +34,6 @@
     font-size: 13px;
     width: 100%;
     border-radius: 0;
-    
 }
 
 .toppageHeaderText {
@@ -47,4 +48,104 @@
     display: flex;
     flex-direction: column;
     row-gap: 8px;
+}
+
+.toppageDashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
+    padding: 8px;
+    box-sizing: border-box;
+    min-height: 250px;
+}
+@media screen and (min-width: 600px) {
+    .toppageDashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.dashboardCard {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboardCardContent {
+    max-height: 250px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.dashboardCardTitle {
+    font-size: 18px;
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cardBottomButton {
+    font-size: 14px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cardBottomButton:hover {
+    background-color: var(--hover-color);
+}
+
+.listLabelsStack {
+    display: inline-block;
+    margin-right: auto;
+}
+
+.columnValues {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.scheduleCardColumn {
+    padding: 8px 16px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    cursor: pointer;
+}
+
+.scheduleCardColumn:hover {
+    background-color: var(--hover-color);
+}
+
+.scheduleCardColumnTime {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.scheduleCardColumnTitle {
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+}
+
+.tasksCardColumn {
+    padding: 8px 16px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.tasksCardColumn:hover {
+    background-color: var(--hover-color);
+}
+
+.tasksCardColumnDeadline {
+    margin-left: auto;
+    font-size: 12px;
 }

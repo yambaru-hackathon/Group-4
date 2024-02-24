@@ -18,6 +18,8 @@ export default createTheme({
       light: '#bfe0c0',
       main: '#B0D9B1',
       dark: '#7b977b',
+      buttonText: "#0288d1",  // ボタンの文字色 (一部)
+      alert: "#c90b0b",  // アラートの文字色
       contrastText: '#000000',
     },
     secondary: {

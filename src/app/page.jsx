@@ -1,9 +1,10 @@
 "use client";
-import { Box, Button, Divider } from '@mui/material';
+import { Box, Divider } from '@mui/material';
 import { atom, useRecoilState } from 'recoil';
 import Styles from "@/styles/styles.module.css";
 import Alerts from "@/app/_alert";
-
+import TodayScheduleCard from "@/components/Dashboard/Cards/TodayScheduleCard";
+import TasksCard from "@/components/Dashboard/Cards/TasksCard";
 
 
 export default function Page() {
@@ -23,7 +24,14 @@ export default function Page() {
     </Box>
 
     {/* カード */}
-    <Box></Box>
+    <Box className={Styles.toppageDashboard}>
+      <Box>
+        <TodayScheduleCard />
+      </Box>
+      <Box>
+        <TasksCard />
+      </Box>
+    </Box>
 
   </Box>
 }
