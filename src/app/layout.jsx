@@ -1,11 +1,18 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "@/styles/global.css";
+import styles from "@/styles/styles.module.css";
+import AppProvider from "@/app/provider";
+import AppBar from "@/components/AppBar/AppBar";
+import { ThemeProvider } from "@mui/material";
+import  theme from "@/components/Theme/theme";
 
 
 export const metadata = {
   title: "ようこそ | サービス名",
   description: "SEO対策用のディスクリプション",
 };
+
+
 
 export default function RootLayout({
   children,
@@ -16,38 +23,17 @@ export default function RootLayout({
       <head>
       </head>
       <body>
-        {/* AppBar */}
-        <AppBar />
+        <ThemeProvider theme={theme}>
+          {/* AppBar */}
+          <AppBar />
 
-        {/* Main */}
-        <main className={styles.defaultAppBarContent}>
-          {children}
-        </main>
+          {/* Main */}
+          <main className={styles.defaultAppBarContent}>
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
       </html>
     </AppProvider>
   );
 }
-
-/*テーマを変更するには
-import {MuiThemeProvider} from '@material-ui/core/styles' //追加
-import {theme} from './layout'//追加（相対アドレスは必要に応じて変更）
-//このタグで囲う
-<MuiThemeProvider theme={theme}></MuiThemeProvider>
-*/
-export const theme = createMuiTheme({
-  palette: {
-    primary: {
-      light: '#bfe0c0',
-      main: '#B0D9B1',
-      dark: '#7b977b',
-      contrastText: '#000000',
-    },
-    secondary: {
-      light: '#99c9ca',
-      main: '#80BCBD',
-      dark: '#598384',
-      contrastText: '#ffffff',
-    },
-  },
-})

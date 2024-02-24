@@ -15,13 +15,11 @@ const AppBarDefault = () => {
           <Typography
             variant="h6"
             component="div"
+            color="primary.contrastText"
           >
             <Link
               href="/"
               className={styles.linkText}
-              style={{
-                color: 'white',
-              }}
             >
               {conf.serviceName}
             </Link>

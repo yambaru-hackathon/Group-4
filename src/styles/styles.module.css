@@ -1,5 +1,6 @@
 .linkText {
     text-decoration: none;
+    color: inherit;
 }
 
 .defaultAppBarContent {
