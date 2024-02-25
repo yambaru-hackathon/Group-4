@@ -63,6 +63,9 @@
     .toppageDashboard {
         grid-template-columns: repeat(2, 1fr);
     }
+    .taskpageDashboard {
+        grid-template-columns: none;
+    }
 }
 
 .dashboardCard {
