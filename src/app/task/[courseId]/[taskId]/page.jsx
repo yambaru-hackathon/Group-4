@@ -11,8 +11,8 @@ const Task = ({
 }) => {
 
   return (
-    <Box sx={{ mx: 3 }}>
-      <Box className={Styles.taskpageDashboard}>
+    <Box className={Styles.taskDetailPage}>
+      <Box className={Styles.taskDetailPageContent}>
         <TasksDetailCard />
       </Box>
     </Box>
