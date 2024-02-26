@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
+import Drive from '@/drive/index.jsx'
 
 const Resource = ({
   params
@@ -9,12 +10,7 @@ const Resource = ({
 
   return (
     <Box>
-      <Box>
-        教材ID: {COURSE_ID}
-      </Box>
-      <Box>
-        教材ページ
-      </Box>
+      <Drive />
     </Box>
   )
 }
