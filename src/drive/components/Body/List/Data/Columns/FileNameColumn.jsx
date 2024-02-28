@@ -8,6 +8,7 @@ const FileNameColumn = ({
   value,
   isLike,
   likeChange = () => {},
+  menuClick = () => {},
   width,
 }) => {
   return (
@@ -25,7 +26,10 @@ const FileNameColumn = ({
 
       {/* メニュー */}
       <Box className={DriveStyles.ListViewDataFieldsFileNameColumnMenuButton}>
-        <IconButton size='small'>
+        <IconButton
+          size='small'
+          onClick={menuClick}
+        >
           <MoreVertRoundedIcon fontSize='inherit' />
         </IconButton>
       </Box>

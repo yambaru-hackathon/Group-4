@@ -98,13 +98,15 @@
     box-sizing: border-box;
 }
 
-.ListViewDataFields {
+.ListViewDataFields,
+.ListViewDataFieldsMenuOpen {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.ListViewDataFields:hover {
+.ListViewDataFields:hover,
+.ListViewDataFieldsMenuOpen {
     background-color: var(--hover-color);
 }
 
@@ -150,9 +152,29 @@
     transition: opacity .1s;
 }
 
+.ListViewDataFieldsFileNameColumnMenuList {
+    font-size: 11px;
+}
+
+ul.css-h4y409-MuiList-root {
+    padding: 0;
+}
+
+.ListViewDataFieldsFileNameColumnMenuList > li {
+    padding: 4px 8px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 12px;
+    min-height: 28px;
+}
+
 .ListViewDataFields:hover .ListViewDataFieldsCheckBox,
 .ListViewDataFields:hover .ListViewDataFieldsFileNameColumnMenuButton,
-.ListViewDataFields:hover .ListViewDataFieldsFileNameColumnLikeButton {
+.ListViewDataFields:hover .ListViewDataFieldsFileNameColumnLikeButton,
+.ListViewDataFieldsMenuOpen .ListViewDataFieldsCheckBox,
+.ListViewDataFieldsMenuOpen .ListViewDataFieldsFileNameColumnMenuButton,
+.ListViewDataFieldsMenuOpen .ListViewDataFieldsFileNameColumnLikeButton {
     pointer-events: unset;
     opacity: 1;
 }
