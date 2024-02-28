@@ -24,7 +24,8 @@
 .headerTopLeft {
     display: flex;
     align-items: center;
-    max-width: 100%;
+    max-width: 600px;
+    width: 100%;
 }
 
 .headerTopRight {
@@ -43,6 +44,24 @@
     box-sizing: border-box;
     user-select: none;
     cursor: pointer;
+    font-family: inherit;
+}
+
+.headerDirectoryTitleTextFieldBox {
+    width: 100%;
+}
+
+.headerDirectoryTitleTextField {
+    font-size: 18px;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 6px;
+}
+
+.headerDirectoryTitleTextField input {
+    font-size: 18px;
+    padding: 0 6px;
+    font-family: inherit;
 }
 
 .headerBottom {

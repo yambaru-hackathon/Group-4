@@ -3,20 +3,18 @@ import React from 'react'
 import DriveStyle from '@/styles/drive.module.css'
 import FileDisplayTypeToggle from '@/drive/components/Header/Buttons/FileDisplayTypeToggle/FileDisplayTypeToggle.jsx'
 import InfoButton from '@/drive/components/Header/Buttons/InfoButton.jsx'
-import Filter from '@/drive/components/Header/Buttons/Filter/Filter.jsx'
 import FileAppendButton from '@/drive/components/Header/Buttons/FileAppendButton/FileAppendButton.jsx'
 import CreateShortcutButton from '@/drive/components/Header/Buttons/CreateShortcutButton.jsx'
+import DirNameField from '@/drive/components/Header/TextField/DirNameField.jsx'
 import LinkCopyButton from '@/drive/components/Header/Buttons/LinkCopyButton.jsx';
 
-const Header = ({
-  dirName = "[ 無題 ]",
-}) => {
+const Header = ({}) => {
   return (
     <Box>
       <Box className={DriveStyle.headerTop}>
         <Box className={DriveStyle.headerTopLeft}>
           {/* 教科名・ディレクトリ名 */}
-          <Box className={DriveStyle.headerDirectoryTitle}>{dirName}</Box>
+          <DirNameField />
         </Box>
 
         <Box  className={DriveStyle.headerTopRight}>
