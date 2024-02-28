@@ -135,6 +135,14 @@
     transition: opacity .1s;
 }
 
+.ListViewDataFieldsIconBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 22px;
+}
+
 
 .ListViewDataFieldsFileNameColumn {
     display: flex;

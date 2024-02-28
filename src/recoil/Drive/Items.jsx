@@ -138,6 +138,57 @@ const directoryItems = atom({
         isLike: false,
         file_size: 1610612736,
         file_type: "zip",
+    },{
+        type: "directory",
+        name: "ショートカットファイル",
+        uid: "njffu99kb96kmyah6ts8adx6bn832rkaase37ggk8h7whf897n",
+        update_at: "2024-02-27T12:07:53.564Z",
+        update_user: {
+            user_name: "松田秀彦",
+            user_id: "1",
+        },
+        create_at: "2024-02-25T12:07:53.564ZZ",
+        create_user: {
+            user_name: "松田秀彦",
+            user_id: "1",
+        },
+        isLike: false,
+        file_size: null,
+        file_type: "shortcut",
+    },{
+        type: "file",
+        name: "音声ファイルテスト",
+        uid: "4dcgk2ysea4ka6gi2is7ckx9n6e7gjswijh8cacni58kimbyj7",
+        update_at: "2024-02-27T12:07:53.564Z",
+        update_user: {
+            user_name: "松田秀彦",
+            user_id: "1",
+        },
+        create_at: "2024-02-25T12:07:53.564ZZ",
+        create_user: {
+            user_name: "松田秀彦",
+            user_id: "1",
+        },
+        isLike: false,
+        file_size: 48787737,
+        file_type: "mp3",
+    },{
+        type: "file",
+        name: "画像ファイルテスト",
+        uid: "tt68k79k7spk5zbh8m3x5si3gihprsdsrhzwa6pby9whz33eh2",
+        update_at: "2024-02-27T12:07:53.564Z",
+        update_user: {
+            user_name: "松田秀彦",
+            user_id: "1",
+        },
+        create_at: "2024-02-25T12:07:53.564ZZ",
+        create_user: {
+            user_name: "松田秀彦",
+            user_id: "1",
+        },
+        isLike: false,
+        file_size: 13487687,
+        file_type: "png",
     }],
 });
 

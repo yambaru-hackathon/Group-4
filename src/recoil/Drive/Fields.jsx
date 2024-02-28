@@ -3,6 +3,10 @@ import { atom } from "recoil";
 const columnFields = atom({
   key: "columnFields",
   default: [{
+    fieldName: "",
+    fieldId: "icon",
+    width: "36px",
+  },{
     fieldName: "名前",
     fieldId: "name",
     width: "250px",

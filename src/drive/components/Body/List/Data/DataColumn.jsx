@@ -11,6 +11,7 @@ import FileTypeColumn from "@/drive/components/Body/List/Data/Columns/FileTypeCo
 import FileSizeColumn from "@/drive/components/Body/List/Data/Columns/FileSizeColumn"
 import ItemMenu from "@/drive/components/Body/List/Data/Menu/ItemMenu";
 import { selectItems } from '@/recoil/Drive/Items';
+import FileTypeIcon from '@/drive/components/Body/List/Data/Columns/FileTypeIcon';
 
 const DataColumn = ({
   uid = null,
@@ -32,7 +33,6 @@ const DataColumn = ({
   // Handlers
   const handleLikeChange = (e) => {
     e.stopPropagation();
-    // setIsLike(!isLike);
   }
 
   const menuOpenHandler = (e) => {
@@ -86,6 +86,13 @@ const DataColumn = ({
         <SelectedCheckBox
           selected={selects.some(elm => elm.uid === uid && elm.type === type)}
           onChange={selectChangeHandler}
+        />
+
+        {/* アイコン */}
+        <FileTypeIcon
+          type={type}
+          file_type={file_type}
+          width={columns.find(elm => elm.fieldId === "icon")?.width}
         />
 
         {/* ファイル名 */}
