@@ -59,6 +59,7 @@
     box-sizing: border-box;
     min-height: 250px;
 }
+
 @media screen and (min-width: 600px) {
     .toppageDashboard {
         grid-template-columns: repeat(2, 1fr);
@@ -82,6 +83,16 @@
     padding-left: 16px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+.dashboardCardSubTitle +.dashboardCardTitle {
+    padding-top: 0;
+}
+
+.dashboardCardSubTitle {
+    padding-left: 16px;
+    padding-top: 14px;
+    font-size: 12px;
+    line-height: 13px;
 }
 
 .cardBottomButton {
@@ -148,4 +159,17 @@
 .tasksCardColumnDeadline {
     margin-left: auto;
     font-size: 12px;
+}
+
+/*
+ *  タスク詳細ページ
+ */
+.taskDetailPage {
+    display: flex;
+    flex-direction: column;
+    height: calc(100svh - 64px - 8px);
+}
+
+.taskDetailPageContent {
+    flex-grow: 1;
 }

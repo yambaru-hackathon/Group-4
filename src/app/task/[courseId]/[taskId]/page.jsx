@@ -1,20 +1,19 @@
+"use client"
 import { Box } from '@mui/material'
+import { atom, useRecoilState } from 'recoil';
+import Styles from "@/styles/styles.module.css";
+import TasksDetailCard from '../../../../components/Dashboard/Cards/TasksDetailCard';
 import React from 'react'
+
 
 const Task = ({
   params
 }) => {
 
-  const COURSE_ID = params.courseId;
-  const TASK_ID = params.taskId;
-
   return (
-    <Box>
-      <Box>
-        教材ID: {COURSE_ID}, 課題ID: {TASK_ID}
-      </Box>
-      <Box>
-        課題詳細ページ
+    <Box className={Styles.taskDetailPage}>
+      <Box className={Styles.taskDetailPageContent}>
+        <TasksDetailCard />
       </Box>
     </Box>
   )
