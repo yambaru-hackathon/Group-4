@@ -23,33 +23,26 @@ const TasksDetailCard = () => {
         subTitle={taskData.label[0]}
       >
         <Box className={Styles.dashboardCardContent}>
-          {
-            [].map(({
-              deadline
-            }, i) => {
-              return (<>
-                <Box
-                  sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
-                  key={i}
-                >
-                  <TasksCardColumn
-                    deadline={deadline}
-                  />
-                  <Divider />
-                </Box>
-                <Box sx={{ fontSize:14, marginLeft:4 }}>
-                  概要
-                </Box>
-                <Box sx={{ fontSize:14, marginLeft:3 }}>
-                  <Button variant="text">ファイルの添付</Button>
-                </Box>
-              </>);
-            })
-          }
+          <>
+            <Box
+              sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+            >
+              <TasksCardColumn
+                deadline={taskData.deadline}
+              />
+              <Button variant="text" sx={{ fontSize: 14 }}>提出</Button>
+            </Box>
+            <Box sx={{ fontSize: 14, marginLeft: 4 }}>
+              {taskData.description}
+            </Box>
+            <Box sx={{ fontSize: 14, marginLeft: 3 }}>
+              <Button variant="text">ファイルの添付</Button>
+            </Box>
+          </>
         </Box>
       </Card>
     </Box>
   )
 }
-  
-  export default TasksDetailCard;
+
+export default TasksDetailCard;
