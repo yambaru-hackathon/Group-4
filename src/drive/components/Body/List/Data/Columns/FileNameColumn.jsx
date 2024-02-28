@@ -10,6 +10,8 @@ const FileNameColumn = ({
   likeChange = () => {},
   menuClick = () => {},
   width,
+  type = "",
+  file_type,
 }) => {
   return (
     <Box
@@ -18,7 +20,7 @@ const FileNameColumn = ({
     >
       {/* ファイル名 */}
       <Box className={DriveStyles.ListViewDataFieldsFileNameColumnValue}>
-        {value}
+        {value}{ type.toLocaleLowerCase() === "directory" ? "": `.${file_type}` }
       </Box>
 
       {/* お気に入り */}

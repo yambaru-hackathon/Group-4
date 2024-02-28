@@ -4,6 +4,7 @@ import DriveStyles from '@/styles/drive.module.css';
 
 const FileTypeColumn = ({
   value = "不明",
+  type = "",
   width,
 }) => {
   return (
@@ -11,7 +12,11 @@ const FileTypeColumn = ({
       className={DriveStyles.ListViewDataFieldsFileTypeColumn}
       width={width}
     >
-      {value}
+      {
+        type.toLocaleLowerCase() === "directory"
+          ? ""
+          : `${value.toUpperCase()} ファイル`
+      }
     </Box>
   )
 }

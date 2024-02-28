@@ -193,7 +193,8 @@ ul.css-h4y409-MuiList-root {
 .ListViewDataFields:hover .ListViewDataFieldsFileNameColumnLikeButton,
 .ListViewDataFieldsMenuOpen .ListViewDataFieldsCheckBox,
 .ListViewDataFieldsMenuOpen .ListViewDataFieldsFileNameColumnMenuButton,
-.ListViewDataFieldsMenuOpen .ListViewDataFieldsFileNameColumnLikeButton {
+.ListViewDataFieldsMenuOpen .ListViewDataFieldsFileNameColumnLikeButton,
+.ListViewDataFieldsSelected .ListViewDataFieldsCheckBox{
     pointer-events: unset;
     opacity: 1;
 }
