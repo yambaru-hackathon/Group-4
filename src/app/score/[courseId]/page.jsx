@@ -1,19 +1,20 @@
+"use client"
 import { Box } from '@mui/material'
+import { atom, useRecoilState } from 'recoil';
+import Styles from "@/styles/styles.module.css";
+import ScoreCard from "../../../components/Dashboard/Cards/ScoreCard"
+import ScoreDetailCard from '../../../components/Dashboard/Cards/ScoreDetailCard'
 import React from 'react'
 
-const Score = ({
-  params
-}) => {
-
-  const COURSE_ID = params.courseId;
+const Score = () => {
 
   return (
-    <Box>
+    <Box className={Styles.toppageDashboard}>
       <Box>
-        各教科成績ページ
+        <ScoreCard />
       </Box>
       <Box>
-        教科ID: {COURSE_ID}
+        <ScoreDetailCard />
       </Box>
     </Box>
   )
