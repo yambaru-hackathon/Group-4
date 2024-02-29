@@ -4,11 +4,11 @@ import Card from "@/components/Dashboard/Cards/Card";
 import Styles from "@/styles/styles.module.css";
 import TasksCardColumn from "@/components/Dashboard/Columns/TasksCardColumn";
 
-const tasksTemplate = [{
+const tasksTemplate = [/*{
   "title": "第8回 演習問題",
   "deadline": "2024-02-23T23:50:00.000Z",
   "label": ["電子回路Ⅱ"],
-},{
+},*/{
   "title": "漢詩演習問題",
   "deadline": "2024-02-24T14:30:00.000Z",
   "label": ["国語"],
@@ -38,15 +38,15 @@ const tasksTemplate = [{
   "label": ["国語"],
 },];
 
-const TasksCard = () => {
+const TasksPopupCard = () => {
   return (
     <Box sx={{ height: "100%"}}>
       <Card
-        title="課題一覧"
-        bottomActionButton="詳細"
+        title="国語の課題一覧"
+        //bottomActionButton="詳細"
         //buttonActionButtonOnClick={() => {console.log("clicked")}}
       >
-        <Box className={Styles.dashboardCardContent}>
+        <Box className={Styles.TasksdashboardCardContent}>
           {
             tasksTemplate.map(({
               title,
@@ -69,4 +69,4 @@ const TasksCard = () => {
   )
 }
 
-export default TasksCard
+export default TasksPopupCard
