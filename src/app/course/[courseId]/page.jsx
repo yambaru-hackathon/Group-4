@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import React from 'react'
 
-const Course = ({params}) => {
+const Course = ({ params }) => {
 
   const COURSE_ID = params.courseId;
 
