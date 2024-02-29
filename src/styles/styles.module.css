@@ -142,6 +142,7 @@
     display: inline-flex;
     align-items: center;
     width: max-content;
+    margin-right: 16px;
 }
 
 .tasksCardColumn {
@@ -173,3 +174,40 @@
 .taskDetailPageContent {
     flex-grow: 1;
 }
+
+.scorePage {
+    display: flex;
+    flex-direction: column;
+    height: calc(100svh - 64px - 8px);
+}
+
+.scoreCardColumn {
+    height: 50px;
+    padding: 8px 16px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    cursor: pointer;
+}
+
+.scoreCardColumnTitle {
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    margin-right: 16px;
+}
+
+.score_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    font-size: 15px;
+}
+
+.redScore {
+    color: red;
+  }
+  
