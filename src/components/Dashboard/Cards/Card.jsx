@@ -6,7 +6,7 @@ import CardBottomActionButton from "@/components/Buttons/CardBottomActionButton"
 const DashboardCard = ({
   children,
   title = "No Title",
-  subTitle = "No SubTitle",
+  subTitle = "",
   bottomActionButton = null,
   buttonActionButtonOnClick = null,
 }) => {
