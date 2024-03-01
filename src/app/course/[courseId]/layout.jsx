@@ -1,6 +1,6 @@
 import "@/styles/global.css";
 import styles from "@/styles/styles.module.css";
-import { Box } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 import CourseTabs from "@/components/Tabs/CourseTabs";
 
 
@@ -14,11 +14,16 @@ export default function RootLayout({
   children,
   params,
 }) {
+  const courseName = "教科名";
 
   return (
-    <Box className={null}>
-      <CourseTabs course_id={params.course_id} />
-      <Box>
+    <Box className={styles.coursePageRoot}>
+      <Box className={styles.coursePageHeader}>
+        <Box className={styles.coursePageHeaderCourseName}>{courseName}</Box>
+        <CourseTabs course_id={params.course_id} />
+      </Box>
+      <Divider />
+      <Box className={styles.coursePageChildren}>
         {children}
       </Box>
     </Box>

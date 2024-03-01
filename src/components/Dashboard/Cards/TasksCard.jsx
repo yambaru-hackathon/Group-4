@@ -1,3 +1,4 @@
+"use client";
 import { Box, Divider } from '@mui/material'
 import React from 'react'
 import Card from "@/components/Dashboard/Cards/Card";
@@ -38,12 +39,21 @@ const tasksTemplate = [{
   "label": ["国語"],
 },];
 
-const TasksCard = () => {
+const TasksCard = ({
+  isSingleCourse = false,
+  grid,
+}) => {
   return (
-    <Box sx={{ height: "100%"}}>
+    <Box sx={{
+      height: "100%",
+      gridColumnStart: grid?.column[0] || "0",
+      gridColumnEnd: grid?.column[1] || "1",
+      gridRowStart: grid?.row[0] || "0",
+      gridRowEnd: grid?.row[1] || "1",
+    }}>
       <Card
         title="課題一覧"
-        bottomActionButton="詳細"
+        bottomActionButton={isSingleCourse? null: "詳細"}
         buttonActionButtonOnClick={() => {console.log("clicked")}}
       >
         <Box className={Styles.dashboardCardContent}>
@@ -58,7 +68,7 @@ const TasksCard = () => {
               <TasksCardColumn
                 title={title}
                 deadline={deadline}
-                label={label}
+                label={isSingleCourse? null: label}
               />
               <Divider />
             </Box>)
