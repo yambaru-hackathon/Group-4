@@ -1,5 +1,6 @@
-import { Box } from '@mui/material'
+import { Box, Divider } from '@mui/material'
 import React from 'react'
+import styles from '@/styles/styles.module.css';
 
 const Attendance = ({
   params
@@ -8,9 +9,11 @@ const Attendance = ({
   
   return (
     <Box>
-      教科ID: {COURSE_ID}
       <Box>
-        出席確認ページ
+        <Box className={styles.coursePageHeaderTitle}>
+          出席
+        </Box>
+        <Divider />
       </Box>
     </Box>
   )

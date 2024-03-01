@@ -1,3 +1,4 @@
+"use client";
 import { Box, Divider } from '@mui/material'
 import React from 'react'
 import Card from "@/components/Dashboard/Cards/Card";
@@ -9,26 +10,6 @@ const tasksTemplate = [{
   "deadline": "2024-02-23T23:50:00.000Z",
   "label": ["電子回路Ⅱ"],
 },{
-  "title": "漢詩演習問題",
-  "deadline": "2024-02-24T14:30:00.000Z",
-  "label": ["国語"],
-},{
-  "title": "漢詩演習問題",
-  "deadline": "2024-02-24T14:59:00.000Z",
-  "label": ["国語"],
-},{
-  "title": "漢詩演習問題",
-  "deadline": "2024-02-25T00:30:00.000Z",
-  "label": ["国語"],
-},{
-  "title": "漢詩演習問題",
-  "deadline": "2024-02-25T14:59:00.000Z",
-  "label": ["国語"],
-},{
-  "title": "漢詩演習問題",
-  "deadline": "2024-02-27T14:59:00.000Z",
-  "label": ["国語"],
-},{
   "title": "漢詩翻訳問題",
   "deadline": "2024-03-02T03:30:00.000Z",
   "label": ["国語"],
@@ -38,13 +19,22 @@ const tasksTemplate = [{
   "label": ["国語"],
 },];
 
-const TasksCard = () => {
+const TasksCard = ({
+  isSingleCourse = false,
+  grid,
+}) => {
   return (
-    <Box sx={{ height: "100%"}}>
+    <Box sx={{
+      height: "100%",
+      gridColumnStart: grid?.column[0] || "0",
+      gridColumnEnd: grid?.column[1] || "1",
+      gridRowStart: grid?.row[0] || "0",
+      gridRowEnd: grid?.row[1] || "1",
+    }}>
       <Card
         title="課題一覧"
-        bottomActionButton="詳細"
-        //buttonActionButtonOnClick={() => {console.log("clicked")}}
+        bottomActionButton={isSingleCourse? null: "詳細"}
+        buttonActionButtonOnClick={() => {console.log("clicked")}}
       >
         <Box className={Styles.dashboardCardContent}>
           {
@@ -58,7 +48,7 @@ const TasksCard = () => {
               <TasksCardColumn
                 title={title}
                 deadline={deadline}
-                label={label}
+                label={isSingleCourse? null: label}
               />
               <Divider />
             </Box>)

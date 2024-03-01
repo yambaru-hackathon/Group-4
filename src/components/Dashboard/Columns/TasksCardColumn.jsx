@@ -24,7 +24,7 @@ const TasksCardColumn = ({
 
         {/* 教科(ラベル) */}
         <Box>
-          <ListLabels labels={label} />
+          <ListLabels labels={label ?? []} />
         </Box>
 
         {/* 締め切りまで */}
