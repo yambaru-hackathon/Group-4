@@ -5,7 +5,7 @@ import CourseTabs from "@/components/Tabs/CourseTabs";
 
 
 export const metadata = {
-  title: "教科名 | サービス名",
+  title: "テスト教科 | サービス名",
   description: "SEO対策用のディスクリプション",
 };
 
@@ -14,7 +14,7 @@ export default function RootLayout({
   children,
   params,
 }) {
-  const courseName = "教科名";
+  const courseName = "テスト教科";
 
   return (
     <Box className={styles.coursePageRoot}>

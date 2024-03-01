@@ -1,16 +1,22 @@
 "use client";
 import { Box, TextField } from '@mui/material'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import DriveStyle from '@/styles/drive.module.css'
 import { useRecoilState } from 'recoil';
-import { directoryData } from "@/recoil/Drive/Directory";
+import { directoryData as directoryDataAtom } from "@/recoil/Drive/Directory";
 
-const DirNameField = () => {
+const DirNameField = ({
+  directoryData,
+}) => {
 
   // Recoil
-  const [{dirName}, setDirData] = useRecoilState(directoryData);
+  const [{
+    dirName,
+    dirChangeName
+  }, setDirData] = useRecoilState(directoryDataAtom);
 
   // State
+  const [stateUpdated, setStateUpdated] = useState(false);
   const [dirNameChange, setDirNameChange] = useState(false);
   const [isChanged, setIsChanged] = useState(false);
   const [composiing, setComposiing] = useState(false);
@@ -47,6 +53,20 @@ const DirNameField = () => {
     }
   }
 
+  // 初期値
+  useEffect(() => {
+    setDirData({
+      dirName: directoryData.directory_name || "不明",
+      dirChangeName: directoryData.change_name,
+      dirCreatedAt: directoryData.created_at,
+      dirUpdatedAt: directoryData.updated_at,
+      dirCreatedUser: directoryData.created_user,
+      dirUpdatedUser: directoryData.updated_user,
+    });
+
+    setStateUpdated(true);
+  }, []);
+
   return (
     <Box sx={{width: "100%",}}>
       <Box
@@ -76,6 +96,10 @@ const DirNameField = () => {
         className={DriveStyle.headerDirectoryTitle}
         display={dirNameChange ? "none" : "block"}
         onClick={() => {
+          // 変更が可能かを確認
+          if (dirChangeName === false) {
+            return false;
+          }
           // 変更が終わっていない場合は何もしない
           if (isChanged) {
             return false;
@@ -88,7 +112,7 @@ const DirNameField = () => {
           }, 5);
         }}
       >
-        {dirName}
+        {stateUpdated ? dirName: directoryData.directory_name}
       </Box>
     </Box>
   )

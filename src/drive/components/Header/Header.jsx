@@ -8,13 +8,17 @@ import CreateShortcutButton from '@/drive/components/Header/Buttons/CreateShortc
 import DirNameField from '@/drive/components/Header/TextField/DirNameField.jsx'
 import LinkCopyButton from '@/drive/components/Header/Buttons/LinkCopyButton.jsx';
 
-const Header = ({}) => {
+const Header = ({
+  directoryData,
+}) => {
   return (
     <Box>
       <Box className={DriveStyle.headerTop}>
         <Box className={DriveStyle.headerTopLeft}>
           {/* 教科名・ディレクトリ名 */}
-          <DirNameField />
+          <DirNameField
+            directoryData={directoryData}
+          />
         </Box>
 
         <Box  className={DriveStyle.headerTopRight}>
