@@ -6,6 +6,7 @@ import CardBottomActionButton from "@/components/Buttons/CardBottomActionButton"
 const DashboardCard = ({
   children,
   title = "No Title",
+  subTitle = "No SubTitle",
   bottomActionButton = null,
   buttonActionButtonOnClick = null,
 }) => {
@@ -13,8 +14,13 @@ const DashboardCard = ({
     <Box sx={{ height: "100%" }}>
       <Card className={Styles.dashboardCard}>
         {/* タイトル */}
-        <Box className={Styles.dashboardCardTitle}>
-          {title}
+        <Box>
+          <Box className={Styles.dashboardCardSubTitle}>
+            {subTitle}
+          </Box>
+          <Box className={Styles.dashboardCardTitle}>
+            {title}
+          </Box>
         </Box>
         <Divider />
 
