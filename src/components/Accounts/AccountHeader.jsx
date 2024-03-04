@@ -30,7 +30,7 @@ const AccountHeader = () => {
           marginTop: 1,
         }}
       >
-        松田 英彦
+        松田 秀彦
       </Box>
 
       {/* メールアドレス */}

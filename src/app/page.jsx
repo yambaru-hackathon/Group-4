@@ -13,7 +13,7 @@ export default function Page() {
     {/* ヘッダー部分 */}
     <Box sx={{mt: 3}}>
       <Box className={Styles.toppageHeaderText}>
-        <Box>松田英彦</Box>さん、こんにちは。
+        <Box>松田秀彦</Box>さん、こんにちは。
       </Box>
       <Divider />
     </Box>
